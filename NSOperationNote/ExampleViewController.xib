@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExampleViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TB-fc-8VX">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="m9g-kc-hah">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="无队列" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWQ-Ep-YVZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="Bmh-r2-mMM"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dqt-gA-qpA">
+                                    <rect key="frame" x="0.0" y="50" width="414" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="obT-Pu-Bz8"/>
+                                    </constraints>
+                                    <state key="normal" title="使用子类 NSInvocationOperation"/>
+                                    <connections>
+                                        <action selector="click1:" destination="-1" eventType="touchUpInside" id="TQr-nj-HWW"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwV-M1-cwJ">
+                                    <rect key="frame" x="0.0" y="100" width="414" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="d5e-ow-taL"/>
+                                    </constraints>
+                                    <state key="normal">
+                                        <string key="title">使用子类 NSBlockOperation
+</string>
+                                    </state>
+                                    <connections>
+                                        <action selector="click2:" destination="-1" eventType="touchUpInside" id="JFr-l9-nAH"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MiS-NN-dTe">
+                                    <rect key="frame" x="0.0" y="150" width="414" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="okc-m4-KTa"/>
+                                    </constraints>
+                                    <state key="normal">
+                                        <string key="title">使用子类 NSBlockOperation-addExecutionBlock:
+</string>
+                                    </state>
+                                    <connections>
+                                        <action selector="click3:" destination="-1" eventType="touchUpInside" id="ccv-HE-Wdh"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60j-W4-Vyi">
+                                    <rect key="frame" x="0.0" y="200" width="414" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="yfP-XK-50Y"/>
+                                    </constraints>
+                                    <state key="normal" title="使用自定义子类MyOperation"/>
+                                    <connections>
+                                        <action selector="click4:" destination="-1" eventType="touchUpInside" id="b5b-R7-l8N"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="创建并加入队列" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuq-fs-mmY">
+                                    <rect key="frame" x="0.0" y="250" width="414" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="tKS-Qn-ijp"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWR-Fv-lB6">
+                                    <rect key="frame" x="0.0" y="300" width="414" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="8d3-Gy-gaT"/>
+                                    </constraints>
+                                    <state key="normal" title="使用 addOperation: 将操作加入到操作队列中"/>
+                                    <connections>
+                                        <action selector="click5:" destination="-1" eventType="touchUpInside" id="tiD-Nz-jPr"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7l-9e-kCC">
+                                    <rect key="frame" x="0.0" y="350" width="414" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="v1Q-SK-elO"/>
+                                    </constraints>
+                                    <state key="normal" title="使用 addOperationWithBlock: 将操作加入到操作队列中"/>
+                                    <connections>
+                                        <action selector="click6:" destination="-1" eventType="touchUpInside" id="FvA-ve-VXn"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwn-5K-fw0">
+                                    <rect key="frame" x="0.0" y="400" width="414" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="o1g-4s-YwJ"/>
+                                    </constraints>
+                                    <state key="normal" title="设置 MaxConcurrentOperationCount（最大并发操作数）"/>
+                                    <connections>
+                                        <action selector="click7:" destination="-1" eventType="touchUpInside" id="ckq-SI-kQP"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oE-Sf-cmv">
+                                    <rect key="frame" x="0.0" y="450" width="414" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="9zn-Yy-Kcn"/>
+                                    </constraints>
+                                    <state key="normal" title="操作依赖，使用方法：addDependency:"/>
+                                    <connections>
+                                        <action selector="click8:" destination="-1" eventType="touchUpInside" id="CMh-LV-cRV"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfY-8X-Ac2">
+                                    <rect key="frame" x="0.0" y="500" width="414" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="9Lx-9O-gcZ"/>
+                                    </constraints>
+                                    <state key="normal" title="NSOperation、NSOperationQueue 线程间的通信"/>
+                                    <connections>
+                                        <action selector="click9:" destination="-1" eventType="touchUpInside" id="Z2s-e7-SjR"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="api-rK-bja">
+                                    <rect key="frame" x="0.0" y="550" width="414" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="sCE-4B-3gS"/>
+                                    </constraints>
+                                    <state key="normal" title="NSOperation、NSOperationQueue 线程同步和线程安全"/>
+                                    <connections>
+                                        <action selector="click10:" destination="-1" eventType="touchUpInside" id="npB-j4-Q1q"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="m9g-kc-hah" secondAttribute="trailing" id="06c-n2-Uid"/>
+                        <constraint firstAttribute="bottom" secondItem="m9g-kc-hah" secondAttribute="bottom" id="5Wo-2w-Zqf"/>
+                        <constraint firstItem="m9g-kc-hah" firstAttribute="top" secondItem="6TB-fc-8VX" secondAttribute="top" id="Jxc-D7-fW5"/>
+                        <constraint firstItem="m9g-kc-hah" firstAttribute="leading" secondItem="6TB-fc-8VX" secondAttribute="leading" id="Xiv-A0-QzI"/>
+                        <constraint firstItem="m9g-kc-hah" firstAttribute="width" secondItem="6TB-fc-8VX" secondAttribute="width" id="Zvr-34-jnB"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="6TB-fc-8VX" secondAttribute="trailing" id="63X-hI-bbm"/>
+                <constraint firstItem="6TB-fc-8VX" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="agd-Id-t4s"/>
+                <constraint firstItem="6TB-fc-8VX" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="b7Q-Dh-qys"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="6TB-fc-8VX" secondAttribute="bottom" id="mLg-Lh-U9P"/>
+            </constraints>
+            <point key="canvasLocation" x="128.98550724637681" y="86.383928571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
